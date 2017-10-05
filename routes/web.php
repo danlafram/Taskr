@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+Route::get('/dashboard', 'TaskController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
